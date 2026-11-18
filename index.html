@@ -3,282 +3,193 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Nocta · Ce soir, le plafond devient lagon</title>
-<meta name="description" content="Nocta, la lampe cube en verre martelé qui projette des ondulations d’eau au plafond. 16 couleurs, télécommande, recharge USB.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='%230B1030'/><rect x='9' y='8' width='14' height='14' rx='2' fill='%237FEBE2'/><rect x='8' y='22' width='16' height='3' rx='1' fill='%23F5EFF8'/></svg>">
+<title>LAGONA — L’art d’habiter</title>
+<meta name="description" content="LAGONA, mobilier, luminaires, textiles et objets choisis. Des matières naturelles, des formes douces, une inspiration méditerranéenne.">
+<meta name="theme-color" content="#F5F1EA">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="css/scrollcraft.css">
-<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="lagona.css">
+<link rel="preload" as="image" href="img/hero-salon.jpg">
 </head>
 <body>
+<div id="lg-header"></div>
 
-<a class="skip" href="#commander">Aller directement à la commande</a>
-<span data-sc-progress></span>
-
-<header class="bar" data-bar>
-  <a class="bar__mark" href="#top" aria-label="Nocta, retour en haut">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="14" rx="2.5"/><rect x="4" y="17.5" width="16" height="3.5" rx="1.2"/></svg>
-    <span>nocta</span>
-  </a>
-  <p class="bar__clock" aria-hidden="true"><span data-navclock>17:40</span><span class="bar__phase" data-navphase>fin d’après-midi</span></p>
-  <nav class="bar__nav" aria-label="Principale">
-    <a href="#ambiances" class="bar__link">Ambiances</a>
-    <a href="#commander" class="bar__link">Commander</a>
-    <button type="button" class="bar__cart" data-cart-open aria-label="Ouvrir le panier">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
-      <span class="bar__count" data-cart-count hidden>0</span>
-    </button>
-  </nav>
-</header>
-
-<main id="top">
-
-  <!-- 1 · MATIN. Couches indépendantes : plaque, soleil, titre, lampe, avant-plan. -->
-  <section class="hero" data-theme="day" data-sc-act="flow" data-sc-drift="#F5EFF8" aria-labelledby="hero-title">
-    <div class="hero__scene" data-hero>
-      <figure class="slot hero__plate" data-slot="01" data-src="assets/img/01-chambre-jour" data-depth="0.06">
-        <img alt="Une chambre aux murs pastel baignée de lumière de fin d’après-midi">
-        <figcaption class="slot__ph"><b>01</b> Chambre pastel, jour · 16:9</figcaption>
-      </figure>
-      <div class="hero__sun" data-depth="0.12" aria-hidden="true"><i></i><i></i><i></i></div>
-      <h1 id="hero-title" class="hero__title" data-depth="0.2">
-        <span>Ce soir,</span>
-        <span>le plafond</span>
-        <span>devient <em>lagon.</em></span>
-      </h1>
-      <figure class="slot slot--cut hero__lamp" data-slot="02" data-src="assets/img/02-cube-detoure" data-depth="0.32">
-        <img alt="La lampe Nocta, un cube de verre martelé posé sur son socle">
-        <figcaption class="slot__ph"><b>02</b> Cube détouré · 3:4 PNG transparent</figcaption>
-      </figure>
-      <figure class="slot slot--cut hero__fore" data-slot="03" data-src="assets/img/03-avant-plan" data-depth="0.55" aria-hidden="true">
-        <img alt="">
-        <figcaption class="slot__ph"><b>03</b> Avant-plan flou · voilage, plante</figcaption>
-      </figure>
+<main>
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-t">
+    <div class="hero__img"><img src="img/hero-salon.jpg" alt="Un salon méditerranéen baigné de soleil : canapé en lin aux courbes douces, table basse en travertin, tapis de laine et olivier en pot." fetchpriority="high"></div>
+    <div class="wrap" style="height:100%">
+      <div class="hero__copy">
+        <span class="label">LAGONA — Collection Intérieurs</span>
+        <h1 class="hero__title" id="hero-t"><span>Le calme</span><span>prend forme.</span></h1>
+        <p class="lede">Mobilier, matières et objets choisis pour créer des espaces qui invitent à vivre autrement.</p>
+        <div class="hero__cta">
+          <a class="btn" href="catalogue.html">Découvrir la collection</a>
+          <a class="link" href="#pieces">Explorer les inspirations <span class="arrow">→</span></a>
+        </div>
+      </div>
     </div>
-    <div class="hero__foot sc-wrap">
-      <p class="hero__lede">Un cube de verre martelé. Une lumière dedans. Et sur ton plafond, l’eau qui bouge lentement, comme au fond d’une piscine l’été.</p>
-      <div class="hero__actions">
-        <a class="btn btn--solid" href="#commander">Commander</a>
-        <a class="btn btn--ghost" href="#bascule">Voir la nuit tomber</a>
+    <div class="hero__scroll" aria-hidden="true"><i></i>Défiler</div>
+    <div class="hero__meta" aria-hidden="true"><span>Canapé Alba</span><span>Table en travertin</span><span>Tapis Siena</span></div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="sec" aria-labelledby="cats-t">
+    <div class="wrap sec__head">
+      <div class="rv">
+        <span class="label">Explorer la maison</span>
+        <h2 class="display display--md" id="cats-t">Une maison, <em>pièce par pièce.</em></h2>
+      </div>
+      <p class="lede rv rv-d1">Du salon à la terrasse, une sélection pensée pour chaque espace et chaque moment de la journée.</p>
+    </div>
+    <div class="cats__rail" data-rail>
+      <a class="cat zoom rv" href="catalogue.html?c=salon"><div class="ph"><img src="img/cat-salon.jpg" alt="Coussins en lin et plaid de laine sur un canapé" loading="lazy"></div><div class="cat__row"><span class="cat__t">Salon</span><span class="cat__n">01</span></div></a>
+      <a class="cat zoom rv rv-d1" href="catalogue.html?c=chambre"><div class="ph"><img src="img/cat-chambre.jpg" alt="Lampe en céramique sur un tabouret de chêne près d’un lit en lin" loading="lazy"></div><div class="cat__row"><span class="cat__t">Chambre</span><span class="cat__n">02</span></div></a>
+      <a class="cat zoom rv rv-d2" href="catalogue.html?c=salle-a-manger"><div class="ph"><img src="img/cat-sam.jpg" alt="Table en chêne dressée de grès, figues et branche d’olivier" loading="lazy"></div><div class="cat__row"><span class="cat__t">Salle à manger</span><span class="cat__n">03</span></div></a>
+      <a class="cat zoom rv rv-d3" href="catalogue.html?c=bureau"><div class="ph"><img src="img/cat-bureau.jpg" alt="Carnet en lin, stylo plume et tasse sur un bureau en chêne" loading="lazy"></div><div class="cat__row"><span class="cat__t">Bureau</span><span class="cat__n">04</span></div></a>
+      <a class="cat zoom rv" href="catalogue.html?c=luminaires"><div class="ph"><img src="img/cat-luminaires.jpg" alt="Lampe en céramique à abat-jour plissé allumée sur un buffet en noyer" loading="lazy"></div><div class="cat__row"><span class="cat__t">Luminaires</span><span class="cat__n">05</span></div></a>
+      <a class="cat zoom rv" href="catalogue.html?c=tapis"><div class="ph"><img src="img/cat-tapis.jpg" alt="Tapis en laine écrue et terracotta sur un sol de pierre" loading="lazy"></div><div class="cat__row"><span class="cat__t">Tapis</span><span class="cat__n">06</span></div></a>
+      <a class="cat zoom rv" href="catalogue.html?c=decoration"><div class="ph"><img src="img/cat-deco.jpg" alt="Cruche en terre cuite, sculpture de pierre et bol en céramique dans une niche" loading="lazy"></div><div class="cat__row"><span class="cat__t">Décoration</span><span class="cat__n">07</span></div></a>
+      <a class="cat zoom rv" href="catalogue.html?c=textiles"><div class="ph"><img src="img/cat-textiles.jpg" alt="Pile de plaids en lin lavé aux couleurs de la terre" loading="lazy"></div><div class="cat__row"><span class="cat__t">Textiles</span><span class="cat__n">08</span></div></a>
+      <a class="cat zoom rv" href="catalogue.html?c=exterieur"><div class="ph"><img src="img/cat-exterieur.jpg" alt="Fauteuil en corde sur un patio blanchi à la chaux, sous un olivier" loading="lazy"></div><div class="cat__row"><span class="cat__t">Extérieur</span><span class="cat__n">09</span></div></a>
+    </div>
+    <div class="wrap cats__foot">
+      <div class="cats__bar"><i data-rail-bar></i></div>
+      <div class="cats__ctrl"><button data-rail-go="-1" aria-label="Précédent"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button><button data-rail-go="1" aria-label="Suivant"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button></div>
+    </div>
+  </section>
+
+  <!-- UNIVERS -->
+  <section class="sec univ" id="univers" aria-labelledby="univ-t">
+    <div class="wrap">
+      <div class="sec__head">
+        <div class="rv"><span class="label">Six collections</span><h2 class="display display--md" id="univ-t">Nos univers</h2></div>
+        <p class="lede rv rv-d1">Des collections inspirées par les matières, les formes et les lieux que l’on aime.</p>
+      </div>
+      <div class="univ__grid">
+        <a class="coll coll--casa zoom rv" href="catalogue.html?c=salon"><div class="ph"><img src="img/col-casa.jpg" alt="Salon chaleureux sous poutres, canapé en bouclette et table en bois massif" loading="lazy"></div>
+          <div class="coll__meta"><span class="coll__num">01</span><span class="coll__name">CASA</span><p class="coll__txt">Mobilier organique, bois chaleureux, tissus doux. Des salons intemporels où l’on se retrouve.</p><span class="link coll__go">Explorer <span class="arrow">→</span></span></div></a>
+        <a class="coll coll--sabbia zoom rv rv-d1" href="catalogue.html"><div class="ph"><img src="img/col-sabbia.jpg" alt="Banc en pierre calcaire, lin naturel et sphère de pierre sur fond sable" loading="lazy"></div>
+          <div class="coll__meta"><span class="coll__num">02</span><span class="coll__name">SABBIA</span><p class="coll__txt">Beiges naturels, pierre, sable et lin. Des intérieurs minimalistes et apaisés.</p></div></a>
+        <a class="coll coll--oliva zoom rv" href="catalogue.html"><div class="ph"><img src="img/col-oliva.jpg" alt="Fauteuil vert olive arrondi, olivier en jarre de terre cuite" loading="lazy"></div>
+          <div class="coll__meta"><span class="coll__num">03</span><span class="coll__name">OLIVA</span><p class="coll__txt">Vert olive, textures naturelles, formes organiques. Toute la chaleur méditerranéenne.</p></div></a>
+        <a class="coll coll--forma zoom rv rv-d1" href="catalogue.html?c=mobilier"><div class="ph"><img src="img/col-forma.jpg" alt="Fauteuil sculptural en bois sombre, sculpture de pierre et vase organique" loading="lazy"></div>
+          <div class="coll__meta"><span class="coll__num">04</span><span class="coll__name">FORMA</span><p class="coll__txt">Mobilier sculptural, objets contemporains, silhouettes d’artiste.</p><span class="link coll__go">Explorer <span class="arrow">→</span></span></div></a>
+        <p class="univ__quote rv">« Des matières, des lumières, des lieux. »</p>
+        <a class="coll coll--lumiere zoom rv" href="catalogue.html?c=luminaires"><div class="ph"><img src="img/col-lumiere.jpg" alt="Coin salon le soir, lampadaire plissé et lampe en céramique allumés" loading="lazy"></div>
+          <div class="coll__meta"><span class="coll__num">05</span><span class="coll__name">LUMIÈRE</span><p class="coll__txt">Luminaires, ombres et espaces d’ambiance. Pour les heures dorées et les soirs longs.</p><span class="link coll__go">Explorer <span class="arrow">→</span></span></div></a>
+        <a class="coll coll--materia zoom rv rv-d1" href="catalogue.html"><div class="ph"><img src="img/col-materia.jpg" alt="Échantillons de chêne, noyer, lin, bouclette, terre cuite et pierre sur travertin" loading="lazy"></div>
+          <div class="coll__meta"><span class="coll__num">06</span><span class="coll__name">MATERIA</span><p class="coll__txt">Le bois, la céramique, la pierre, le lin, la laine. La collection de l’essentiel.</p><span class="link coll__go">Explorer <span class="arrow">→</span></span></div></a>
       </div>
     </div>
   </section>
 
-  <!-- 2 · LA BASCULE. Le pic : le scroll pilote l’heure, la pièce passe à la nuit. -->
-  <section id="bascule" class="bascule" data-theme="night" data-sc-act="pin" data-sc-span="4.2" data-sc-drift="#0B1030" aria-label="De la fin d’après-midi à la nuit">
-    <div data-sc-stage class="bascule__stage" data-bascule>
-      <figure class="slot bascule__day" data-slot="01" data-src="assets/img/01-chambre-jour" aria-hidden="true">
-        <img alt="">
-        <figcaption class="slot__ph"><b>01</b> Même chambre, jour</figcaption>
-      </figure>
-      <figure class="slot bascule__night" data-slot="04" data-src="assets/img/04-chambre-nuit" aria-hidden="true">
-        <img alt="">
-        <figcaption class="slot__ph"><b>04</b> Même chambre, nuit · cube allumé, ondulations au plafond</figcaption>
-      </figure>
-      <!-- 05 : la vidéo jour → nuit. Activée automatiquement si le fichier existe. -->
-      <video class="bascule__video" data-pending-src="assets/video/05-bascule.mp4" data-pending-src-mobile="assets/video/05-bascule-m.mp4" muted playsinline preload="none" aria-hidden="true"></video>
-      <div class="bascule__dusk" aria-hidden="true"></div>
-      <canvas class="bascule__water" aria-hidden="true"></canvas>
-      <div class="bascule__glow" aria-hidden="true"></div>
-
-      <div class="bascule__clock" aria-hidden="true">
-        <span class="bascule__time" data-clock>17:40</span>
-        <span class="bascule__arc"><i data-sunpos></i></span>
+  <!-- PIECES -->
+  <section class="sec" id="pieces" aria-labelledby="show-t">
+    <div class="wrap">
+      <div class="sec__head">
+        <div class="rv"><span class="label">La sélection</span><h2 class="display display--md" id="show-t">Nos pièces <em>de caractère.</em></h2></div>
+        <p class="lede rv rv-d1">Des objets choisis pour leur forme, leur matière et leur façon d’habiter l’espace.</p>
       </div>
-
-      <div class="bascule__copy">
-        <p class="bascule__line bascule__line--day" data-sc-cue="0 0.2 0">La lumière tombe doucement.</p>
-        <p class="bascule__line bascule__line--day" data-sc-cue="0.17 0.38">Les couleurs de la pièce s’éteignent une à une.</p>
-        <p class="bascule__line bascule__line--night bascule__line--big" data-sc-cue="0.36 0.52">Un geste.</p>
-        <p class="bascule__line bascule__line--night bascule__line--big" data-sc-cue="0.7">Et le plafond<br>se met à onduler.</p>
+      <div class="tabs rv" role="tablist">
+        <button class="tab is-on" role="tab" aria-selected="true" data-tab="new">Nouveautés</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="love">Nos coups de cœur</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="best">Best-sellers</button>
       </div>
+      <div class="grid" data-showcase></div>
+      <div class="show__foot"><a class="btn" href="catalogue.html">Voir toute la collection</a></div>
     </div>
   </section>
 
-  <!-- 3 · LA MATIÈRE. Révélation par balayage, le seul acte qui se lit comme un texte. -->
-  <section class="matiere sc-section" data-theme="night" data-sc-act="flow" data-sc-drift="#0E1236" aria-labelledby="matiere-title">
-    <div class="sc-wrap matiere__grid">
-      <figure class="slot matiere__macro" data-slot="06" data-src="assets/img/06-macro-verre" data-sc-reveal="left" data-sc-reveal-at="0.12 0.52">
-        <img alt="Gros plan sur le verre martelé du cube, traversé par une lumière turquoise">
-        <figcaption class="slot__ph"><b>06</b> Macro du verre traversé par la lumière · 16:9</figcaption>
-      </figure>
-      <div class="matiere__text" data-sc-in data-sc-stagger="80">
-        <h2 id="matiere-title" class="sc-display sc-display--lg">Un verre qui garde la mémoire de l’eau.</h2>
-        <p class="sc-body">Chaque face du cube ressemble à une surface d’eau figée : des creux, des bosses, aucune régularité. Quand la lumière les traverse, elle se plie, se croise, et dessine au-dessus de toi des vagues qui ne se répètent jamais.</p>
-        <ul class="facts">
-          <li><strong>16</strong><span>couleurs, du corail au glacier</span></li>
-          <li><strong>1</strong><span>télécommande, pour ne pas se lever</span></li>
-          <li><strong>USB</strong><span>pour la recharger, sans fil ensuite</span></li>
+  <!-- EDITORIAL -->
+  <section class="edito" aria-labelledby="edito-t">
+    <div class="edito__img"><img src="img/edito-lumiere.jpg" alt="Un rayon de soleil dessine une arche de lumière sur un mur chaulé, près d’un banc en chêne" loading="lazy"></div>
+    <div class="edito__txt">
+      <span class="label rv">Notre regard</span>
+      <h2 class="display rv rv-d1" id="edito-t">Habiter <em>la lumière.</em></h2>
+      <p class="lede rv rv-d2">Des matières naturelles, des formes douces et une lumière qui transforme les espaces. LAGONA imagine des intérieurs où chaque détail trouve sa place.</p>
+      <dl class="edito__facts rv rv-d3">
+        <div><dt>12</dt><dd>Ateliers<br>partenaires</dd></div>
+        <div><dt>86 %</dt><dd>Matières<br>naturelles</dd></div>
+        <div><dt>10 ans</dt><dd>Garantie<br>structure</dd></div>
+      </dl>
+      <div class="edito__sig rv rv-d3"><a class="btn" href="#univers">Découvrir notre univers</a><span>L’art d’habiter.</span></div>
+    </div>
+  </section>
+
+  <!-- ROOMS -->
+  <section class="sec" aria-labelledby="rooms-t">
+    <div class="wrap">
+      <div class="sec__head">
+        <div class="rv"><span class="label">Inspirations</span><h2 class="display display--md" id="rooms-t">Chaque pièce, <em>un nouvel équilibre.</em></h2></div>
+        <p class="lede rv rv-d1">Sept pièces, sept atmosphères. Imaginez l’intérieur complet, puis retrouvez chaque objet.</p>
+      </div>
+      <div class="rooms__in">
+        <ul class="rooms__list rv">
+          <li><button class="room-btn is-on" data-room="salon" data-cap="Un canapé bas, un pouf en bouclette, et la lumière d’or qui traverse le lin."><small>01</small><span>Le salon</span><em>Voir</em></button></li>
+          <li><button class="room-btn" data-room="chambre" data-cap="Le lin froissé du matin, une lampe de céramique, une niche qui garde la fraîcheur."><small>02</small><span>La chambre</span><em>Voir</em></button></li>
+          <li><button class="room-btn" data-room="sam" data-cap="Une longue table en chêne, des chaises tressées, et la porte ouverte sur le patio."><small>03</small><span>La salle à manger</span><em>Voir</em></button></li>
+          <li><button class="room-btn" data-room="bureau" data-cap="Un bureau sous la fenêtre, des niches en plâtre, le silence d’un après-midi."><small>04</small><span>Le bureau</span><em>Voir</em></button></li>
+          <li><button class="room-btn" data-room="entree" data-cap="Une console de travertin, un miroir libre, des branches sèches : le premier geste."><small>05</small><span>L’entrée</span><em>Voir</em></button></li>
+          <li><button class="room-btn" data-room="sdb" data-cap="Pierre, tadelakt et serviettes de lin. Le bain comme un rituel."><small>06</small><span>La salle de bain</span><em>Voir</em></button></li>
+          <li><button class="room-btn" data-room="exterieur" data-cap="Sous la canisse, l’ombre des oliviers et la vue qui s’étire jusqu’aux collines."><small>07</small><span>L’extérieur</span><em>Voir</em></button></li>
         </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4 · AMBIANCES. Le geste signature : le plafond change de couleur sous le doigt. -->
-  <section id="ambiances" class="amb" data-theme="night" data-sc-act="flow" data-sc-drift="#090C26" aria-labelledby="amb-title">
-    <canvas class="amb__ceiling" data-ceiling aria-hidden="true"></canvas>
-    <div class="amb__fade" aria-hidden="true"></div>
-    <div class="sc-wrap amb__grid">
-      <div class="amb__copy">
-        <h2 id="amb-title" class="sc-display sc-display--lg">Seize plafonds.<br>Un seul geste.</h2>
-        <p class="sc-body">Touche une couleur. Ce que tu vois au-dessus, c’est ce que ta chambre verra ce soir.</p>
-        <p class="amb__now" aria-live="polite"><span class="amb__dot" data-amb-dot></span><span data-amb-name>Lagon</span></p>
-        <div class="amb__modes" role="group" aria-label="Mode de lumière">
-          <button type="button" class="chip is-on" data-mode="fixe" aria-pressed="true">Fixe</button>
-          <button type="button" class="chip" data-mode="respire" aria-pressed="false">Respiration</button>
-          <button type="button" class="chip" data-mode="fondu" aria-pressed="false">Fondu des 16</button>
-        </div>
-      </div>
-      <div class="amb__stage">
-        <canvas class="amb__cube" data-cube aria-label="Le cube Nocta en 3D. Glisse pour le faire tourner." role="img"></canvas>
-        <p class="amb__hint">Glisse pour tourner le cube</p>
-      </div>
-      <div class="amb__swatches" role="radiogroup" aria-label="Couleur de la lampe" data-swatches></div>
-    </div>
-  </section>
-
-  <!-- 5 · USAGES. Rail horizontal : trois pièces, trois soirs. -->
-  <section class="usages" data-theme="night" data-sc-act="pan" data-sc-span="3.4" data-sc-drift="#1E1A44" aria-labelledby="usages-title">
-    <div data-sc-stage class="usages__stage">
-      <div class="rail" data-sc-pan="0.08">
-        <div class="rail__lead">
-          <h2 id="usages-title" class="sc-display sc-display--md">Une lumière pour chaque soir.</h2>
-          <p class="sc-body">Pas une lampe de chevet de plus. Un décor qui change avec ton humeur.</p>
-        </div>
-        <article class="card">
-          <figure class="slot card__img" data-slot="07" data-src="assets/img/07-salon-violet">
-            <img alt="Un salon le soir, le plafond couvert d’ondulations violettes">
-            <figcaption class="slot__ph"><b>07</b> Salon, ambiance violette · 3:4</figcaption>
-          </figure>
-          <h3>Le salon, après le film</h3>
-          <p>Lavande sur les murs. On baisse la voix sans s’en rendre compte.</p>
-        </article>
-        <article class="card">
-          <figure class="slot card__img" data-slot="08" data-src="assets/img/08-chambre-saphir">
-            <img alt="Une chambre où le plafond ondule en bleu saphir au-dessus du lit">
-            <figcaption class="slot__ph"><b>08</b> Chambre, ambiance saphir · 3:4</figcaption>
-          </figure>
-          <h3>La chambre, pour s’endormir</h3>
-          <p>Saphir profond au-dessus du lit. Le genre de bleu qu’on regarde jusqu’à fermer les yeux.</p>
-        </article>
-        <article class="card">
-          <figure class="slot card__img" data-slot="09" data-src="assets/img/09-detente-ambre">
-            <img alt="Un coin lecture baigné d’ondulations ambrées">
-            <figcaption class="slot__ph"><b>09</b> Coin détente, ambiance ambre · 3:4</figcaption>
-          </figure>
-          <h3>Le bain, le livre, la pause</h3>
-          <p>Ambre chaud. La pièce devient un endroit où rien ne presse.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6 · AU MATIN, ON COMMANDE. Retour au pastel, la fin résout. -->
-  <section id="commander" class="buy sc-section" data-theme="day" data-sc-act="flow" data-sc-drift="#F5EFF8" aria-labelledby="buy-title">
-    <div class="sc-wrap buy__grid">
-      <div class="buy__media" data-tints>
-        <figure class="slot buy__shot" data-slot="10" data-src="assets/img/10-packshot">
-          <img alt="La lampe Nocta allumée en turquoise sur un fond pastel menthe">
-          <figcaption class="slot__ph"><b>10</b> Packshot, fond pastel · 3:4</figcaption>
-        </figure>
-        <img class="buy__tint" data-tint="lavande" src="assets/img/10-packshot-lavande.webp" alt="La lampe Nocta allumée en lavande sur un fond pastel mauve" loading="eager" decoding="async">
-        <img class="buy__tint" data-tint="ambre" src="assets/img/10-packshot-ambre.webp" alt="La lampe Nocta allumée en ambre sur un fond pastel abricot" loading="eager" decoding="async">
-      </div>
-      <div class="buy__panel">
-        <p class="buy__morning">07:12 · Bonjour. Elle t’attendra ce soir.</p>
-        <h2 id="buy-title" class="sc-display sc-display--lg">Nocta, le cube</h2>
-        <p class="buy__price"><span data-price></span><s data-compare hidden></s></p>
-        <p class="sc-body">Lampe à ondulations d’eau en verre martelé. 16 couleurs, télécommande incluse, recharge USB.</p>
-
-        <div class="tints">
-          <div class="tints__row" role="radiogroup" aria-label="Aperçu de la lampe allumée" data-tint-group>
-            <button type="button" class="tint" role="radio" aria-checked="true" data-tint-btn="lagon" style="--c:#5CD6FF">Lagon</button>
-            <button type="button" class="tint" role="radio" aria-checked="false" tabindex="-1" data-tint-btn="lavande" style="--c:#9B7BFF">Lavande</button>
-            <button type="button" class="tint" role="radio" aria-checked="false" tabindex="-1" data-tint-btn="ambre" style="--c:#FFB347">Ambre</button>
+        <div class="rooms__stage">
+          <div class="rooms__frame" data-room-frame>
+            <img class="is-on" data-r="salon" src="img/room-salon.jpg" alt="Salon au coucher du soleil, canapé modulable en lin et pouf en bouclette" loading="lazy">
+            <img data-r="chambre" src="img/room-chambre.jpg" alt="Chambre méditerranéenne en lin naturel près d’une fenêtre en arche" loading="lazy">
+            <img data-r="sam" src="img/room-sam.jpg" alt="Salle à manger avec table en chêne et chaises en noyer, ouverte sur un patio" loading="lazy">
+            <img data-r="bureau" src="img/room-bureau.jpg" alt="Bureau en chêne sous une fenêtre, niches en plâtre et céramiques" loading="lazy">
+            <img data-r="entree" src="img/room-entree.jpg" alt="Entrée avec console en travertin, miroir organique et vase de branches sèches" loading="lazy">
+            <img data-r="sdb" src="img/room-sdb.jpg" alt="Salle de bain en travertin, vasque et baignoire en pierre" loading="lazy">
+            <img data-r="exterieur" src="img/room-exterieur.jpg" alt="Terrasse ombragée sous canisse, oliviers en jarres et vue sur les collines" loading="lazy">
           </div>
-          <p class="tints__note">Une seule lampe, 16 couleurs. L’aperçu ne change pas ta commande.</p>
-        </div>
-
-        <form class="buy__form" data-buy>
-          <div class="stepper stepper--lg" role="group" aria-label="Quantité">
-            <button type="button" data-qty="-1" aria-label="Une lampe de moins">−</button>
-            <output data-qty-out aria-live="polite">1</output>
-            <button type="button" data-qty="1" aria-label="Une lampe de plus">+</button>
-          </div>
-          <button type="submit" class="btn btn--solid btn--wide">Ajouter au panier</button>
-        </form>
-        <p class="buy__added" data-added role="status" hidden>Ajouté. <button type="button" class="link" data-cart-open>Voir le panier</button></p>
-
-        <ul class="buy__perks">
-          <li><span class="perk__ic" aria-hidden="true">◐</span>16 couleurs et modes d’ambiance</li>
-          <li><span class="perk__ic" aria-hidden="true">⌁</span>Recharge USB, câble fourni</li>
-          <li><span class="perk__ic" aria-hidden="true">◎</span>Télécommande incluse</li>
-        </ul>
-
-        <div class="faq">
-          <details>
-            <summary>Livraison</summary>
-            <p>Délais et tarifs à venir.</p>
-          </details>
-          <details>
-            <summary>Autonomie de la batterie</summary>
-            <p>Recharge par USB. Autonomie précise à venir.</p>
-          </details>
-          <details>
-            <summary>Dimensions</summary>
-            <p>À venir.</p>
-          </details>
-          <details>
-            <summary>Retours</summary>
-            <p>Conditions de retour à venir.</p>
-          </details>
+          <div class="rooms__cap"><p data-room-cap>Un canapé bas, un pouf en bouclette, et la lumière d’or qui traverse le lin.</p><a class="link" href="catalogue.html">Shopper la pièce <span class="arrow">→</span></a></div>
         </div>
       </div>
     </div>
-
-    <div class="sc-wrap box">
-      <figure class="slot box__img" data-slot="11" data-src="assets/img/11-contenu-boite">
-        <img alt="Le contenu de la boîte : le cube, son câble USB et la télécommande">
-        <figcaption class="slot__ph"><b>11</b> Contenu de la boîte · 16:9</figcaption>
-      </figure>
-      <div class="box__text">
-        <h3 class="sc-display sc-display--md">Dans la boîte</h3>
-        <ul>
-          <li>Le cube Nocta et son socle</li>
-          <li>Un câble de recharge USB</li>
-          <li>La télécommande 16 couleurs</li>
-        </ul>
-      </div>
-    </div>
-
-    <footer class="foot sc-wrap">
-      <p class="foot__mark">nocta</p>
-      <p class="foot__line">Lumières d’ambiance. Conçu pour les plafonds qui s’ennuient.</p>
-      <p class="foot__small">© 2026 Nocta · Site de démonstration, aucun paiement réel.</p>
-    </footer>
   </section>
 
+  <!-- LIGHTING -->
+  <section class="sec light" aria-labelledby="light-t">
+    <div class="wrap light__grid">
+      <div class="light__head">
+        <span class="label rv">Luminaires</span>
+        <h2 class="display rv rv-d1" id="light-t">Une lumière, <em>une atmosphère.</em></h2>
+        <p class="lede rv rv-d2">Suspensions sculpturales, lampes douces et lumières d’appoint. Chaque lumière transforme la perception d’un lieu.</p>
+        <ul class="light__types rv rv-d3">
+          <li><a href="catalogue.html?c=luminaires">Suspensions</a></li><li><a href="catalogue.html?c=luminaires">Lampes de table</a></li><li><a href="catalogue.html?c=luminaires">Lampadaires</a></li><li><a href="catalogue.html?c=luminaires">Appliques</a></li><li><a href="catalogue.html?c=luminaires">Lampes portables</a></li><li><a href="catalogue.html?c=luminaires">Ambiance</a></li>
+        </ul>
+        <a class="btn btn--light rv rv-d3" href="catalogue.html?c=luminaires">Tous les luminaires</a>
+      </div>
+      <figure class="light__a rv" style="margin:0"><div class="ph zoom"><img src="img/light-suspension.jpg" alt="Deux suspensions plissées allumées au-dessus d’une table en chêne, à la tombée de la nuit" loading="lazy"></div><figcaption><span>Suspensions</span><span>Le dîner, 21 h</span></figcaption></figure>
+      <figure class="light__b rv" style="margin:0"><div class="ph zoom"><img src="img/light-applique.jpg" alt="Applique sculpturale en plâtre projetant un éventail de lumière" loading="lazy"></div><figcaption><span>Appliques</span><span>L’entrée</span></figcaption></figure>
+      <figure class="light__c rv rv-d1" style="margin:0"><div class="ph zoom"><img src="img/col-lumiere.jpg" alt="Lampadaire plissé et lampe de table allumés dans un coin salon" loading="lazy"></div><figcaption><span>Lampadaires</span></figcaption></figure>
+      <div class="light__picks" data-light-picks>
+        <div class="light__note rv"><p>« La lumière d’un soir change une pièce plus qu’un meuble. »</p><span class="label">Nos deux lumières signature</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATERIALS -->
+  <section class="sec" aria-labelledby="mat-t">
+    <div class="wrap mat__grid">
+      <div class="mat__head">
+        <span class="label rv">Textiles & matières</span>
+        <h2 class="display rv rv-d1" id="mat-t">Le beau <em>se ressent.</em></h2>
+        <p class="lede rv rv-d2">Le lin, la laine, le bois, la céramique. Des matières authentiques qui racontent le temps et donnent du caractère à nos intérieurs.</p>
+      </div>
+      <figure class="mat__tile mat__t1 zoom rv" style="margin:0"><div class="ph"><img src="img/tex-laine.jpg" alt="Gros plan sur les boucles d’un tapis en laine nouée" loading="lazy"></div><figcaption><div><b>La laine</b><span class="mat__more">Nouée à la main, elle garde la chaleur et étouffe les bruits.</span></div><small>Tapis · Plaids</small></figcaption></figure>
+      <figure class="mat__tile mat__t2 zoom rv" style="margin:0"><div class="ph"><img src="img/tex-lin.jpg" alt="Voilage de lin traversé par le soleil" loading="lazy"></div><figcaption><div><b>Le lin</b><span class="mat__more">Lavé à la pierre, il filtre la lumière comme un voile.</span></div><small>Rideaux · Coussins</small></figcaption></figure>
+      <figure class="mat__tile mat__t3 zoom rv rv-d1" style="margin:0"><div class="ph"><img src="img/tex-ceramique.jpg" alt="Bols et tasse en grès tournés main" loading="lazy"></div><figcaption><div><b>La céramique</b><span class="mat__more">Tournée main, chaque pièce garde la trace du geste.</span></div><small>Vases · Arts de la table</small></figcaption></figure>
+      <figure class="mat__tile mat__t4 zoom rv rv-d2" style="margin:0"><div class="ph"><img src="img/tex-bois-pierre.jpg" alt="Jonction entre un plateau de chêne huilé et un bloc de travertin" loading="lazy"></div><figcaption><div><b>Bois & pierre</b><span class="mat__more">Chêne huilé, noyer, travertin : des matières qui se patinent.</span></div><small>Mobilier</small></figcaption></figure>
+      <div class="mat__list rv"><span>Laine</span><span>Lin lavé</span><span>Bouclette</span><span>Chêne</span><span>Noyer</span><span>Travertin</span><span>Grès</span><span>Papier de riz</span></div>
+    </div>
+  </section>
 </main>
 
-<!-- Tiroir panier -->
-<div class="drawer" data-cart-drawer hidden>
-  <div class="drawer__veil" data-cart-close></div>
-  <aside class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
-    <header class="drawer__head">
-      <h2 id="drawer-title">Ton panier</h2>
-      <button type="button" class="drawer__x" data-cart-close aria-label="Fermer le panier">×</button>
-    </header>
-    <div class="drawer__lines" data-cart-lines></div>
-    <footer class="drawer__foot">
-      <p class="drawer__total"><span>Sous-total</span><strong data-cart-total>0 €</strong></p>
-      <a class="btn btn--solid btn--wide" href="checkout.html" data-cart-checkout>Passer commande</a>
-    </footer>
-  </aside>
-</div>
-
-<script src="js/scrollcraft.js"></script>
-<script type="module" src="js/main.js"></script>
+<div id="lg-footer"></div>
+<script src="lagona.js"></script>
 </body>
 </html>
