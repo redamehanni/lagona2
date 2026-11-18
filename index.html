@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nocta · Ce soir, le plafond devient lagon</title>
+<meta name="description" content="Nocta, la lampe cube en verre martelé qui projette des ondulations d’eau au plafond. 16 couleurs, télécommande, recharge USB.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='%230B1030'/><rect x='9' y='8' width='14' height='14' rx='2' fill='%237FEBE2'/><rect x='8' y='22' width='16' height='3' rx='1' fill='%23F5EFF8'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/scrollcraft.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+<a class="skip" href="#commander">Aller directement à la commande</a>
+<span data-sc-progress></span>
+
+<header class="bar" data-bar>
+  <a class="bar__mark" href="#top" aria-label="Nocta, retour en haut">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="14" rx="2.5"/><rect x="4" y="17.5" width="16" height="3.5" rx="1.2"/></svg>
+    <span>nocta</span>
+  </a>
+  <p class="bar__clock" aria-hidden="true"><span data-navclock>17:40</span><span class="bar__phase" data-navphase>fin d’après-midi</span></p>
+  <nav class="bar__nav" aria-label="Principale">
+    <a href="#ambiances" class="bar__link">Ambiances</a>
+    <a href="#commander" class="bar__link">Commander</a>
+    <button type="button" class="bar__cart" data-cart-open aria-label="Ouvrir le panier">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+      <span class="bar__count" data-cart-count hidden>0</span>
+    </button>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- 1 · MATIN. Couches indépendantes : plaque, soleil, titre, lampe, avant-plan. -->
+  <section class="hero" data-theme="day" data-sc-act="flow" data-sc-drift="#F5EFF8" aria-labelledby="hero-title">
+    <div class="hero__scene" data-hero>
+      <figure class="slot hero__plate" data-slot="01" data-src="assets/img/01-chambre-jour" data-depth="0.06">
+        <img alt="Une chambre aux murs pastel baignée de lumière de fin d’après-midi">
+        <figcaption class="slot__ph"><b>01</b> Chambre pastel, jour · 16:9</figcaption>
+      </figure>
+      <div class="hero__sun" data-depth="0.12" aria-hidden="true"><i></i><i></i><i></i></div>
+      <h1 id="hero-title" class="hero__title" data-depth="0.2">
+        <span>Ce soir,</span>
+        <span>le plafond</span>
+        <span>devient <em>lagon.</em></span>
+      </h1>
+      <figure class="slot slot--cut hero__lamp" data-slot="02" data-src="assets/img/02-cube-detoure" data-depth="0.32">
+        <img alt="La lampe Nocta, un cube de verre martelé posé sur son socle">
+        <figcaption class="slot__ph"><b>02</b> Cube détouré · 3:4 PNG transparent</figcaption>
+      </figure>
+      <figure class="slot slot--cut hero__fore" data-slot="03" data-src="assets/img/03-avant-plan" data-depth="0.55" aria-hidden="true">
+        <img alt="">
+        <figcaption class="slot__ph"><b>03</b> Avant-plan flou · voilage, plante</figcaption>
+      </figure>
+    </div>
+    <div class="hero__foot sc-wrap">
+      <p class="hero__lede">Un cube de verre martelé. Une lumière dedans. Et sur ton plafond, l’eau qui bouge lentement, comme au fond d’une piscine l’été.</p>
+      <div class="hero__actions">
+        <a class="btn btn--solid" href="#commander">Commander</a>
+        <a class="btn btn--ghost" href="#bascule">Voir la nuit tomber</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · LA BASCULE. Le pic : le scroll pilote l’heure, la pièce passe à la nuit. -->
+  <section id="bascule" class="bascule" data-theme="night" data-sc-act="pin" data-sc-span="4.2" data-sc-drift="#0B1030" aria-label="De la fin d’après-midi à la nuit">
+    <div data-sc-stage class="bascule__stage" data-bascule>
+      <figure class="slot bascule__day" data-slot="01" data-src="assets/img/01-chambre-jour" aria-hidden="true">
+        <img alt="">
+        <figcaption class="slot__ph"><b>01</b> Même chambre, jour</figcaption>
+      </figure>
+      <figure class="slot bascule__night" data-slot="04" data-src="assets/img/04-chambre-nuit" aria-hidden="true">
+        <img alt="">
+        <figcaption class="slot__ph"><b>04</b> Même chambre, nuit · cube allumé, ondulations au plafond</figcaption>
+      </figure>
+      <!-- 05 : la vidéo jour → nuit. Activée automatiquement si le fichier existe. -->
+      <video class="bascule__video" data-pending-src="assets/video/05-bascule.mp4" data-pending-src-mobile="assets/video/05-bascule-m.mp4" muted playsinline preload="none" aria-hidden="true"></video>
+      <div class="bascule__dusk" aria-hidden="true"></div>
+      <canvas class="bascule__water" aria-hidden="true"></canvas>
+      <div class="bascule__glow" aria-hidden="true"></div>
+
+      <div class="bascule__clock" aria-hidden="true">
+        <span class="bascule__time" data-clock>17:40</span>
+        <span class="bascule__arc"><i data-sunpos></i></span>
+      </div>
+
+      <div class="bascule__copy">
+        <p class="bascule__line bascule__line--day" data-sc-cue="0 0.2 0">La lumière tombe doucement.</p>
+        <p class="bascule__line bascule__line--day" data-sc-cue="0.17 0.38">Les couleurs de la pièce s’éteignent une à une.</p>
+        <p class="bascule__line bascule__line--night bascule__line--big" data-sc-cue="0.36 0.52">Un geste.</p>
+        <p class="bascule__line bascule__line--night bascule__line--big" data-sc-cue="0.7">Et le plafond<br>se met à onduler.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · LA MATIÈRE. Révélation par balayage, le seul acte qui se lit comme un texte. -->
+  <section class="matiere sc-section" data-theme="night" data-sc-act="flow" data-sc-drift="#0E1236" aria-labelledby="matiere-title">
+    <div class="sc-wrap matiere__grid">
+      <figure class="slot matiere__macro" data-slot="06" data-src="assets/img/06-macro-verre" data-sc-reveal="left" data-sc-reveal-at="0.12 0.52">
+        <img alt="Gros plan sur le verre martelé du cube, traversé par une lumière turquoise">
+        <figcaption class="slot__ph"><b>06</b> Macro du verre traversé par la lumière · 16:9</figcaption>
+      </figure>
+      <div class="matiere__text" data-sc-in data-sc-stagger="80">
+        <h2 id="matiere-title" class="sc-display sc-display--lg">Un verre qui garde la mémoire de l’eau.</h2>
+        <p class="sc-body">Chaque face du cube ressemble à une surface d’eau figée : des creux, des bosses, aucune régularité. Quand la lumière les traverse, elle se plie, se croise, et dessine au-dessus de toi des vagues qui ne se répètent jamais.</p>
+        <ul class="facts">
+          <li><strong>16</strong><span>couleurs, du corail au glacier</span></li>
+          <li><strong>1</strong><span>télécommande, pour ne pas se lever</span></li>
+          <li><strong>USB</strong><span>pour la recharger, sans fil ensuite</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · AMBIANCES. Le geste signature : le plafond change de couleur sous le doigt. -->
+  <section id="ambiances" class="amb" data-theme="night" data-sc-act="flow" data-sc-drift="#090C26" aria-labelledby="amb-title">
+    <canvas class="amb__ceiling" data-ceiling aria-hidden="true"></canvas>
+    <div class="amb__fade" aria-hidden="true"></div>
+    <div class="sc-wrap amb__grid">
+      <div class="amb__copy">
+        <h2 id="amb-title" class="sc-display sc-display--lg">Seize plafonds.<br>Un seul geste.</h2>
+        <p class="sc-body">Touche une couleur. Ce que tu vois au-dessus, c’est ce que ta chambre verra ce soir.</p>
+        <p class="amb__now" aria-live="polite"><span class="amb__dot" data-amb-dot></span><span data-amb-name>Lagon</span></p>
+        <div class="amb__modes" role="group" aria-label="Mode de lumière">
+          <button type="button" class="chip is-on" data-mode="fixe" aria-pressed="true">Fixe</button>
+          <button type="button" class="chip" data-mode="respire" aria-pressed="false">Respiration</button>
+          <button type="button" class="chip" data-mode="fondu" aria-pressed="false">Fondu des 16</button>
+        </div>
+      </div>
+      <div class="amb__stage">
+        <canvas class="amb__cube" data-cube aria-label="Le cube Nocta en 3D. Glisse pour le faire tourner." role="img"></canvas>
+        <p class="amb__hint">Glisse pour tourner le cube</p>
+      </div>
+      <div class="amb__swatches" role="radiogroup" aria-label="Couleur de la lampe" data-swatches></div>
+    </div>
+  </section>
+
+  <!-- 5 · USAGES. Rail horizontal : trois pièces, trois soirs. -->
+  <section class="usages" data-theme="night" data-sc-act="pan" data-sc-span="3.4" data-sc-drift="#1E1A44" aria-labelledby="usages-title">
+    <div data-sc-stage class="usages__stage">
+      <div class="rail" data-sc-pan="0.08">
+        <div class="rail__lead">
+          <h2 id="usages-title" class="sc-display sc-display--md">Une lumière pour chaque soir.</h2>
+          <p class="sc-body">Pas une lampe de chevet de plus. Un décor qui change avec ton humeur.</p>
+        </div>
+        <article class="card">
+          <figure class="slot card__img" data-slot="07" data-src="assets/img/07-salon-violet">
+            <img alt="Un salon le soir, le plafond couvert d’ondulations violettes">
+            <figcaption class="slot__ph"><b>07</b> Salon, ambiance violette · 3:4</figcaption>
+          </figure>
+          <h3>Le salon, après le film</h3>
+          <p>Lavande sur les murs. On baisse la voix sans s’en rendre compte.</p>
+        </article>
+        <article class="card">
+          <figure class="slot card__img" data-slot="08" data-src="assets/img/08-chambre-saphir">
+            <img alt="Une chambre où le plafond ondule en bleu saphir au-dessus du lit">
+            <figcaption class="slot__ph"><b>08</b> Chambre, ambiance saphir · 3:4</figcaption>
+          </figure>
+          <h3>La chambre, pour s’endormir</h3>
+          <p>Saphir profond au-dessus du lit. Le genre de bleu qu’on regarde jusqu’à fermer les yeux.</p>
+        </article>
+        <article class="card">
+          <figure class="slot card__img" data-slot="09" data-src="assets/img/09-detente-ambre">
+            <img alt="Un coin lecture baigné d’ondulations ambrées">
+            <figcaption class="slot__ph"><b>09</b> Coin détente, ambiance ambre · 3:4</figcaption>
+          </figure>
+          <h3>Le bain, le livre, la pause</h3>
+          <p>Ambre chaud. La pièce devient un endroit où rien ne presse.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · AU MATIN, ON COMMANDE. Retour au pastel, la fin résout. -->
+  <section id="commander" class="buy sc-section" data-theme="day" data-sc-act="flow" data-sc-drift="#F5EFF8" aria-labelledby="buy-title">
+    <div class="sc-wrap buy__grid">
+      <div class="buy__media" data-tints>
+        <figure class="slot buy__shot" data-slot="10" data-src="assets/img/10-packshot">
+          <img alt="La lampe Nocta allumée en turquoise sur un fond pastel menthe">
+          <figcaption class="slot__ph"><b>10</b> Packshot, fond pastel · 3:4</figcaption>
+        </figure>
+        <img class="buy__tint" data-tint="lavande" src="assets/img/10-packshot-lavande.webp" alt="La lampe Nocta allumée en lavande sur un fond pastel mauve" loading="eager" decoding="async">
+        <img class="buy__tint" data-tint="ambre" src="assets/img/10-packshot-ambre.webp" alt="La lampe Nocta allumée en ambre sur un fond pastel abricot" loading="eager" decoding="async">
+      </div>
+      <div class="buy__panel">
+        <p class="buy__morning">07:12 · Bonjour. Elle t’attendra ce soir.</p>
+        <h2 id="buy-title" class="sc-display sc-display--lg">Nocta, le cube</h2>
+        <p class="buy__price"><span data-price></span><s data-compare hidden></s></p>
+        <p class="sc-body">Lampe à ondulations d’eau en verre martelé. 16 couleurs, télécommande incluse, recharge USB.</p>
+
+        <div class="tints">
+          <div class="tints__row" role="radiogroup" aria-label="Aperçu de la lampe allumée" data-tint-group>
+            <button type="button" class="tint" role="radio" aria-checked="true" data-tint-btn="lagon" style="--c:#5CD6FF">Lagon</button>
+            <button type="button" class="tint" role="radio" aria-checked="false" tabindex="-1" data-tint-btn="lavande" style="--c:#9B7BFF">Lavande</button>
+            <button type="button" class="tint" role="radio" aria-checked="false" tabindex="-1" data-tint-btn="ambre" style="--c:#FFB347">Ambre</button>
+          </div>
+          <p class="tints__note">Une seule lampe, 16 couleurs. L’aperçu ne change pas ta commande.</p>
+        </div>
+
+        <form class="buy__form" data-buy>
+          <div class="stepper stepper--lg" role="group" aria-label="Quantité">
+            <button type="button" data-qty="-1" aria-label="Une lampe de moins">−</button>
+            <output data-qty-out aria-live="polite">1</output>
+            <button type="button" data-qty="1" aria-label="Une lampe de plus">+</button>
+          </div>
+          <button type="submit" class="btn btn--solid btn--wide">Ajouter au panier</button>
+        </form>
+        <p class="buy__added" data-added role="status" hidden>Ajouté. <button type="button" class="link" data-cart-open>Voir le panier</button></p>
+
+        <ul class="buy__perks">
+          <li><span class="perk__ic" aria-hidden="true">◐</span>16 couleurs et modes d’ambiance</li>
+          <li><span class="perk__ic" aria-hidden="true">⌁</span>Recharge USB, câble fourni</li>
+          <li><span class="perk__ic" aria-hidden="true">◎</span>Télécommande incluse</li>
+        </ul>
+
+        <div class="faq">
+          <details>
+            <summary>Livraison</summary>
+            <p>Délais et tarifs à venir.</p>
+          </details>
+          <details>
+            <summary>Autonomie de la batterie</summary>
+            <p>Recharge par USB. Autonomie précise à venir.</p>
+          </details>
+          <details>
+            <summary>Dimensions</summary>
+            <p>À venir.</p>
+          </details>
+          <details>
+            <summary>Retours</summary>
+            <p>Conditions de retour à venir.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc-wrap box">
+      <figure class="slot box__img" data-slot="11" data-src="assets/img/11-contenu-boite">
+        <img alt="Le contenu de la boîte : le cube, son câble USB et la télécommande">
+        <figcaption class="slot__ph"><b>11</b> Contenu de la boîte · 16:9</figcaption>
+      </figure>
+      <div class="box__text">
+        <h3 class="sc-display sc-display--md">Dans la boîte</h3>
+        <ul>
+          <li>Le cube Nocta et son socle</li>
+          <li>Un câble de recharge USB</li>
+          <li>La télécommande 16 couleurs</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="foot sc-wrap">
+      <p class="foot__mark">nocta</p>
+      <p class="foot__line">Lumières d’ambiance. Conçu pour les plafonds qui s’ennuient.</p>
+      <p class="foot__small">© 2026 Nocta · Site de démonstration, aucun paiement réel.</p>
+    </footer>
+  </section>
+
+</main>
+
+<!-- Tiroir panier -->
+<div class="drawer" data-cart-drawer hidden>
+  <div class="drawer__veil" data-cart-close></div>
+  <aside class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+    <header class="drawer__head">
+      <h2 id="drawer-title">Ton panier</h2>
+      <button type="button" class="drawer__x" data-cart-close aria-label="Fermer le panier">×</button>
+    </header>
+    <div class="drawer__lines" data-cart-lines></div>
+    <footer class="drawer__foot">
+      <p class="drawer__total"><span>Sous-total</span><strong data-cart-total>0 €</strong></p>
+      <a class="btn btn--solid btn--wide" href="checkout.html" data-cart-checkout>Passer commande</a>
+    </footer>
+  </aside>
+</div>
+
+<script src="js/scrollcraft.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

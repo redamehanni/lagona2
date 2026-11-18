@@ -1,0 +1,82 @@
+/* Lagona (ex-Nocta) - identite globale (remplace celle d'Horizon Rando) - 2026-11-04 */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap');
+:root{--nx-ink:#1D1A3B;--nx-lag:#0D6E78;--nx-lag-l:#7FEBE2;--nx-bg:#F5EFF8;--nx-lilac:#E7DDF7;--nx-night:#0B1030}
+::selection{background:#0D6E78;color:#fff}
+
+/* En-tete Lagona : logo a gauche, horloge au centre (accueil), panier a droite. Menu, recherche et compte masques. */
+#header.header__content{position:sticky;top:0;z-index:1000;background:rgba(245,239,248,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #E7DDF7;color:#1D1A3B;box-shadow:none;transition:color .4s,background-color .4s}
+#header .header__relative{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;height:68px;min-height:0;max-width:none;padding:0 clamp(20px,5vw,88px)}
+#header .header__nav,#header .header__search,#header .header__account,nav.nav,.nav__wrapper,#nav{display:none!important}
+#header .header__logo{flex:0 0 auto;margin:0;padding:0;width:auto}
+#header .header__logo__a{display:inline-flex;align-items:center;gap:9px;color:inherit;text-decoration:none}
+#header .header__logo__a__img__name{display:none}
+#header .header__logo__a::before{content:'';width:24px;height:24px;background:currentColor;-webkit-mask:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27><rect x=%275%27 y=%273%27 width=%2714%27 height=%2714%27 rx=%272.5%27 opacity=%27.55%27/><rect x=%274%27 y=%2717.5%27 width=%2716%27 height=%273.5%27 rx=%271.2%27/></svg>') center/contain no-repeat;mask:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27><rect x=%275%27 y=%273%27 width=%2714%27 height=%2714%27 rx=%272.5%27 opacity=%27.55%27/><rect x=%274%27 y=%2717.5%27 width=%2716%27 height=%273.5%27 rx=%271.2%27/></svg>') center/contain no-repeat}
+#header .header__logo__a::after{content:'lagona';font:700 23px/1 'Gabarito',system-ui,sans-serif;letter-spacing:-.04em}
+#header .header__area{display:flex!important;align-items:center;position:static!important;width:auto!important;height:auto!important;margin:0 0 0 auto;padding:0;visibility:visible!important;opacity:1!important;transform:none!important;overflow:visible!important}
+#header .header__cart{position:relative!important;inset:auto!important;display:block!important;margin:0}
+#header .header__cart__a.header__tab{position:relative;display:grid!important;place-items:center;width:46px!important;height:46px!important;padding:0!important;border:0;border-radius:999px;background:color-mix(in srgb,currentColor 10%,transparent);color:inherit!important;font-size:0;text-indent:0!important;box-shadow:none}
+/* le sac de l'ancien site : contour fin, anse en arc */
+#header .header__cart__a.header__tab::before{content:'';display:block;width:21px;height:21px;background:currentColor;-webkit-mask:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%271.7%27 stroke-linejoin=%27round%27><path d=%27M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8Z%27/><path d=%27M9 8V6.5a3 3 0 0 1 6 0V8%27/></svg>') center/contain no-repeat;mask:url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27black%27 stroke-width=%271.7%27 stroke-linejoin=%27round%27><path d=%27M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8Z%27/><path d=%27M9 8V6.5a3 3 0 0 1 6 0V8%27/></svg>') center/contain no-repeat}
+#header .header__cart__a.header__tab::after{display:none}
+#header .header__cart__text{display:none!important}
+#header .header__cart__a__nb{position:absolute;top:-2px;right:-2px;display:inline-block;min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:#0D6E78;color:#fff;font:600 11px/20px system-ui,sans-serif;text-align:center}
+#header .header__cart__a__nb--hide{display:none!important}
+.nx-hclock{position:absolute;left:50%;top:50%;translate:-50% -50%;margin:0;display:inline-flex;align-items:baseline;gap:10px;padding:7px 15px;border-radius:999px;background:color-mix(in srgb,currentColor 9%,transparent);font:500 15px/1 'Geist Mono',ui-monospace,monospace;font-variant-numeric:tabular-nums;white-space:nowrap;pointer-events:none}
+.nx-hclock small{font:500 12px/1 system-ui,sans-serif;opacity:.72}
+/* le theme peint .header__relative et fixe sa couleur : c'est #header qui porte fond et couleur */
+#header.header__content .header__relative{background:transparent!important;color:inherit!important}
+#header.header__content{width:100%;max-width:none;left:0;right:0}
+#header.header__content .header__relative{width:100%!important;max-width:none!important;margin:0!important;box-sizing:border-box}
+#header .header__logo__a,#header .header__cart__a.header__tab,#header .nx-hclock{color:inherit!important}
+#header.header__content.headroom--unpinned{transform:none!important;top:0}
+@media (max-width:760px){.nx-hclock small{display:none}#header .header__relative{height:60px}}
+
+/* Accueil : en-tete transparent pose sur le heros, il passe en clair quand la page devient nuit */
+body.page-homepage.margin-top-wiziblocks{margin-top:0!important;padding-top:0!important}
+.page-homepage #header.header__content{position:fixed;left:0;right:0;top:0;background:transparent;border-bottom-color:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
+.page-homepage #header.header__content::before{content:'';position:absolute;inset:0 0 -24px 0;z-index:-1;pointer-events:none;opacity:0;background:linear-gradient(180deg,rgba(9,12,38,.6),rgba(9,12,38,0));transition:opacity .4s}
+.page-homepage #header.nx-night{color:#EEF0FF}
+.page-homepage #header.nx-night::before{opacity:1}
+.page-homepage .nx-bascule__stage{top:0;height:100vh}
+.page-homepage .nx-hero__title{top:clamp(110px,18vh,190px)}
+.page-homepage .nx-clock{top:calc(72px + 3vh)}
+
+/* Liens Ambiances et Commander : le menu enrichi du theme, replace dans la barre a gauche du panier (ordinateur) */
+@media (min-width:761px){
+.header__wrapper{position:relative}
+.page-homepage .header__wrapper nav.nav.nav{position:fixed}
+.header__wrapper nav.nav.nav{display:block!important;position:absolute;top:0;right:calc(clamp(20px,5vw,88px) + 46px);left:auto;z-index:1001;width:auto;height:68px;margin:0;padding:0;background:transparent!important;border:0;box-shadow:none;color:#1D1A3B;transform:none;transition:color .4s}
+.header__wrapper nav.nav .nav__wrapper.nav__wrapper,.header__wrapper nav.nav .nav__maxWidth{display:flex!important;align-items:center;gap:28px;height:68px;width:auto;max-width:none;margin:0;padding:0;background:transparent!important;border:0;position:static}
+.header__wrapper nav.nav .nav__itemlvl1--login,.header__wrapper nav.nav .nav__itemlvl1--home,.header__wrapper nav.nav .nav__arrow,.header__wrapper nav.nav .nav__sublevel,.header__wrapper nav.nav .nav__checkboxlvl0{display:none!important}
+.header__wrapper nav.nav .nav__label,.header__wrapper nav.nav .nav__wrapper2{display:block;position:static;margin:0;padding:0;background:transparent;border:0;color:inherit!important}
+.header__wrapper nav.nav a.nav__itemlvl1{display:inline-block;padding:8px 0;color:inherit!important;background:none!important;font:500 17px/1 'Geist',system-ui,sans-serif;letter-spacing:-.005em;text-transform:none;text-decoration:none;transition:opacity .2s}
+.header__wrapper nav.nav a.nav__itemlvl1:hover{opacity:.65}
+.page-homepage #header.nx-night~nav.nav{color:#EEF0FF}
+}
+
+/* Fiche produit (galerie et zoom non touches) */
+.prod-details__name{font-family:'Gabarito',system-ui,sans-serif;font-weight:700;letter-spacing:-.03em;line-height:1.02;color:#1D1A3B}
+.prod-details #price{font-family:'Gabarito',system-ui,sans-serif;font-weight:700;color:#1D1A3B}
+.prod-details__brand__url{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#0D6E78}
+.buyable #add-cart-btn{min-height:58px;font-size:16px;font-weight:600}
+.prod-infos__desc h2{font-family:'Gabarito',system-ui,sans-serif;font-weight:700;letter-spacing:-.02em;color:#1D1A3B;margin:32px 0 10px}
+.prod-carac__desc li{padding:10px 0;border-bottom:1px solid #E7DDF7}
+
+/* Reassurance */
+.rea{background:#F5EFF8;border-top:1px solid #E7DDF7}
+.rea__icon{color:#0D6E78}
+
+/* Pied de page bleu nuit : liens clairs pour rester lisibles */
+#footer .footer__title{font-family:'Gabarito',system-ui,sans-serif;font-weight:700;color:#EEF0FF}
+#footer .footer__link,#footer .footer__info__text,#footer .footer__desc{color:rgba(238,240,255,.78)}
+#footer .footer__link:hover{color:#7FEBE2}
+#footer .footer__btn{background:#7FEBE2;color:#0B1030;border-radius:999px}
+.powered{box-sizing:border-box;background:#0B1030;color:rgba(238,240,255,.65)}
+
+/* Focus visible */
+.header a:focus-visible,.prod a:focus-visible,#footer a:focus-visible,.button:focus-visible{outline:2px solid #0D6E78;outline-offset:3px}
+
+/* Ajout — 2026-11-04 */
+/* Pied de page : contact limite a l'e-mail (adresse, ville et telephone du theme masques) */
+#footer .footer__info p.footer__info__text,#footer .footer__info a.footer__info__text[href^='tel:']{display:none}
+/* Tunnel de commande : boutons Connexion avec Facebook / PayPal masques */.sc-auth-part:has(> .sc-fast-auth),.sc-fast-auth,.logup__facebook,.ident-btn{display:none!important}

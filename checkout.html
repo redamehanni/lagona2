@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nocta · Commande</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='%230B1030'/><rect x='9' y='8' width='14' height='14' rx='2' fill='%237FEBE2'/><rect x='8' y='22' width='16' height='3' rx='1' fill='%23F5EFF8'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/scrollcraft.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/checkout.css">
+</head>
+<body class="co" data-theme="day">
+
+<header class="co__bar sc-wrap">
+  <a class="bar__mark" href="index.html" aria-label="Nocta, retour à la boutique">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="14" rx="2.5"/><rect x="4" y="17.5" width="16" height="3.5" rx="1.2"/></svg>
+    <span>nocta</span>
+  </a>
+  <p class="co__demo">Paiement de démonstration · rien n’est débité</p>
+</header>
+
+<main class="sc-wrap co__grid">
+  <section class="co__form-wrap" aria-labelledby="co-title" data-step="form">
+    <h1 id="co-title" class="sc-display sc-display--md">Presque ce soir.</h1>
+
+    <form class="co__form" data-checkout novalidate>
+      <fieldset>
+        <legend>Contact</legend>
+        <label>E-mail<input type="email" name="email" autocomplete="email" required></label>
+      </fieldset>
+      <fieldset>
+        <legend>Livraison</legend>
+        <div class="co__row">
+          <label>Prénom<input name="given" autocomplete="given-name" required></label>
+          <label>Nom<input name="family" autocomplete="family-name" required></label>
+        </div>
+        <label>Adresse<input name="address" autocomplete="street-address" required></label>
+        <div class="co__row">
+          <label>Code postal<input name="zip" autocomplete="postal-code" inputmode="numeric" required></label>
+          <label>Ville<input name="city" autocomplete="address-level2" required></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Paiement</legend>
+        <div class="co__pay" role="note">Le module de paiement (Stripe, Shopify ou autre) sera branché ici. Aucune donnée bancaire n’est demandée sur ce site de démonstration.</div>
+      </fieldset>
+      <p class="co__error" data-error role="alert" hidden></p>
+      <button type="submit" class="btn btn--solid btn--wide">Valider la commande de démonstration</button>
+    </form>
+  </section>
+
+  <section class="co__done" data-done hidden aria-labelledby="done-title" tabindex="-1">
+    <div class="co__done-sky" aria-hidden="true"></div>
+    <h1 id="done-title" class="sc-display sc-display--lg">C’est noté.</h1>
+    <p class="sc-body">Commande de démonstration enregistrée pour <strong data-done-name></strong>. Aucun paiement n’a eu lieu.</p>
+    <a class="btn btn--solid" href="index.html">Retour à la boutique</a>
+  </section>
+
+  <aside class="co__summary" aria-labelledby="sum-title">
+    <h2 id="sum-title">Récapitulatif</h2>
+    <div class="line">
+      <div class="line__thumb" aria-hidden="true"></div>
+      <div class="line__info">
+        <p class="line__name" data-p-name></p>
+        <p class="line__meta">Quantité : <span data-qty></span></p>
+      </div>
+      <p class="line__price" data-sub></p>
+    </div>
+    <p class="co__sum"><span>Livraison</span><span data-ship></span></p>
+    <p class="co__sum co__sum--total"><span>Total</span><strong data-total></strong></p>
+    <p class="co__empty" data-empty hidden>Ton panier est vide. <a href="index.html#commander">Retour à la lampe</a></p>
+  </aside>
+</main>
+
+<script type="module" src="js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LAGONA — L’art d’habiter</title>
+<meta name="description" content="LAGONA, mobilier, luminaires, textiles et objets choisis. Des matières naturelles, des formes douces, une inspiration méditerranéenne.">
+<meta name="theme-color" content="#F5F1EA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="lagona.css">
+<link rel="preload" as="image" href="img/hero-salon.jpg">
+</head>
+<body>
+<div id="lg-header"></div>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-t">
+    <div class="hero__img"><img src="img/hero-salon.jpg" alt="Un salon méditerranéen baigné de soleil : canapé en lin aux courbes douces, table basse en travertin, tapis de laine et olivier en pot." fetchpriority="high"></div>
+    <div class="wrap" style="height:100%">
+      <div class="hero__copy">
+        <span class="label">LAGONA — Collection Intérieurs</span>
+        <h1 class="hero__title" id="hero-t"><span>Le calme</span><span>prend forme.</span></h1>
+        <p class="lede">Mobilier, matières et objets choisis pour créer des espaces qui invitent à vivre autrement.</p>
+        <div class="hero__cta">
+          <a class="btn" href="catalogue.html">Découvrir la collection</a>
+          <a class="link" href="#pieces">Explorer les inspirations <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true"><i></i>Défiler</div>
+    <div class="hero__meta" aria-hidden="true"><span>Canapé Alba</span><span>Table en travertin</span><span>Tapis Siena</span></div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="sec" aria-labelledby="cats-t">
+    <div class="wrap sec__head">
+      <div class="rv">
+        <span class="label">Explorer la maison</span>
+        <h2 class="display display--md" id="cats-t">Une maison, <em>pièce par pièce.</em></h2>
+      </div>
+      <p class="lede rv rv-d1">Du salon à la terrasse, une sélection pensée pour chaque espace et chaque moment de la journée.</p>
+    </div>
+    <div class="cats__rail" data-rail>
+      <a class="cat zoom rv" href="catalogue.html?c=salon"><div class="ph"><img src="img/cat-salon.jpg" alt="Coussins en lin et plaid de laine sur un canapé" loading="lazy"></div><div class="cat__row"><span class="cat__t">Salon</span><span class="cat__n">01</span></div></a>
+      <a class="cat zoom rv rv-d1" href="catalogue.html?c=chambre"><div class="ph"><img src="img/cat-chambre.jpg" alt="Lampe en céramique sur un tabouret de chêne près d’un lit en lin" loading="lazy"></div><div class="cat__row"><span class="cat__t">Chambre</span><span class="cat__n">02</span></div></a>
+      <a class="cat zoom rv rv-d2" href="catalogue.html?c=salle-a-manger"><div class="ph"><img src="img/cat-sam.jpg" alt="Table en chêne dressée de grès, figues et branche d’olivier" loading="lazy"></div><div class="cat__row"><span class="cat__t">Salle à manger</span><span class="cat__n">03</span></div></a>
+      <a class="cat zoom rv rv-d3" href="catalogue.html?c=bureau"><div class="ph"><img src="img/cat-bureau.jpg" alt="Carnet en lin, stylo plume et tasse sur un bureau en chêne" loading="lazy"></div><div class="cat__row"><span class="cat__t">Bureau</span><span class="cat__n">04</span></div></a>
+      <a class="cat zoom rv" href="catalogue.html?c=luminaires"><div class="ph"><img src="img/cat-luminaires.jpg" alt="Lampe en céramique à abat-jour plissé allumée sur un buffet en noyer" loading="lazy"></div><div class="cat__row"><span class="cat__t">Luminaires</span><span class="cat__n">05</span></div></a>
+      <a class="cat zoom rv" href="catalogue.html?c=tapis"><div class="ph"><img src="img/cat-tapis.jpg" alt="Tapis en laine écrue et terracotta sur un sol de pierre" loading="lazy"></div><div class="cat__row"><span class="cat__t">Tapis</span><span class="cat__n">06</span></div></a>
+      <a class="cat zoom rv" href="catalogue.html?c=decoration"><div class="ph"><img src="img/cat-deco.jpg" alt="Cruche en terre cuite, sculpture de pierre et bol en céramique dans une niche" loading="lazy"></div><div class="cat__row"><span class="cat__t">Décoration</span><span class="cat__n">07</span></div></a>
+      <a class="cat zoom rv" href="catalogue.html?c=textiles"><div class="ph"><img src="img/cat-textiles.jpg" alt="Pile de plaids en lin lavé aux couleurs de la terre" loading="lazy"></div><div class="cat__row"><span class="cat__t">Textiles</span><span class="cat__n">08</span></div></a>
+      <a class="cat zoom rv" href="catalogue.html?c=exterieur"><div class="ph"><img src="img/cat-exterieur.jpg" alt="Fauteuil en corde sur un patio blanchi à la chaux, sous un olivier" loading="lazy"></div><div class="cat__row"><span class="cat__t">Extérieur</span><span class="cat__n">09</span></div></a>
+    </div>
+    <div class="wrap cats__foot">
+      <div class="cats__bar"><i data-rail-bar></i></div>
+      <div class="cats__ctrl"><button data-rail-go="-1" aria-label="Précédent"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button><button data-rail-go="1" aria-label="Suivant"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button></div>
+    </div>
+  </section>
+
+  <!-- UNIVERS -->
+  <section class="sec univ" id="univers" aria-labelledby="univ-t">
+    <div class="wrap">
+      <div class="sec__head">
+        <div class="rv"><span class="label">Six collections</span><h2 class="display display--md" id="univ-t">Nos univers</h2></div>
+        <p class="lede rv rv-d1">Des collections inspirées par les matières, les formes et les lieux que l’on aime.</p>
+      </div>
+      <div class="univ__grid">
+        <a class="coll coll--casa zoom rv" href="catalogue.html?c=salon"><div class="ph"><img src="img/col-casa.jpg" alt="Salon chaleureux sous poutres, canapé en bouclette et table en bois massif" loading="lazy"></div>
+          <div class="coll__meta"><span class="coll__num">01</span><span class="coll__name">CASA</span><p class="coll__txt">Mobilier organique, bois chaleureux, tissus doux. Des salons intemporels où l’on se retrouve.</p><span class="link coll__go">Explorer <span class="arrow">→</span></span></div></a>
+        <a class="coll coll--sabbia zoom rv rv-d1" href="catalogue.html"><div class="ph"><img src="img/col-sabbia.jpg" alt="Banc en pierre calcaire, lin naturel et sphère de pierre sur fond sable" loading="lazy"></div>
+          <div class="coll__meta"><span class="coll__num">02</span><span class="coll__name">SABBIA</span><p class="coll__txt">Beiges naturels, pierre, sable et lin. Des intérieurs minimalistes et apaisés.</p></div></a>
+        <a class="coll coll--oliva zoom rv" href="catalogue.html"><div class="ph"><img src="img/col-oliva.jpg" alt="Fauteuil vert olive arrondi, olivier en jarre de terre cuite" loading="lazy"></div>
+          <div class="coll__meta"><span class="coll__num">03</span><span class="coll__name">OLIVA</span><p class="coll__txt">Vert olive, textures naturelles, formes organiques. Toute la chaleur méditerranéenne.</p></div></a>
+        <a class="coll coll--forma zoom rv rv-d1" href="catalogue.html?c=mobilier"><div class="ph"><img src="img/col-forma.jpg" alt="Fauteuil sculptural en bois sombre, sculpture de pierre et vase organique" loading="lazy"></div>
+          <div class="coll__meta"><span class="coll__num">04</span><span class="coll__name">FORMA</span><p class="coll__txt">Mobilier sculptural, objets contemporains, silhouettes d’artiste.</p><span class="link coll__go">Explorer <span class="arrow">→</span></span></div></a>
+        <p class="univ__quote rv">« Des matières, des lumières, des lieux. »</p>
+        <a class="coll coll--lumiere zoom rv" href="catalogue.html?c=luminaires"><div class="ph"><img src="img/col-lumiere.jpg" alt="Coin salon le soir, lampadaire plissé et lampe en céramique allumés" loading="lazy"></div>
+          <div class="coll__meta"><span class="coll__num">05</span><span class="coll__name">LUMIÈRE</span><p class="coll__txt">Luminaires, ombres et espaces d’ambiance. Pour les heures dorées et les soirs longs.</p><span class="link coll__go">Explorer <span class="arrow">→</span></span></div></a>
+        <a class="coll coll--materia zoom rv rv-d1" href="catalogue.html"><div class="ph"><img src="img/col-materia.jpg" alt="Échantillons de chêne, noyer, lin, bouclette, terre cuite et pierre sur travertin" loading="lazy"></div>
+          <div class="coll__meta"><span class="coll__num">06</span><span class="coll__name">MATERIA</span><p class="coll__txt">Le bois, la céramique, la pierre, le lin, la laine. La collection de l’essentiel.</p><span class="link coll__go">Explorer <span class="arrow">→</span></span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIECES -->
+  <section class="sec" id="pieces" aria-labelledby="show-t">
+    <div class="wrap">
+      <div class="sec__head">
+        <div class="rv"><span class="label">La sélection</span><h2 class="display display--md" id="show-t">Nos pièces <em>de caractère.</em></h2></div>
+        <p class="lede rv rv-d1">Des objets choisis pour leur forme, leur matière et leur façon d’habiter l’espace.</p>
+      </div>
+      <div class="tabs rv" role="tablist">
+        <button class="tab is-on" role="tab" aria-selected="true" data-tab="new">Nouveautés</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="love">Nos coups de cœur</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="best">Best-sellers</button>
+      </div>
+      <div class="grid" data-showcase></div>
+      <div class="show__foot"><a class="btn" href="catalogue.html">Voir toute la collection</a></div>
+    </div>
+  </section>
+
+  <!-- EDITORIAL -->
+  <section class="edito" aria-labelledby="edito-t">
+    <div class="edito__img"><img src="img/edito-lumiere.jpg" alt="Un rayon de soleil dessine une arche de lumière sur un mur chaulé, près d’un banc en chêne" loading="lazy"></div>
+    <div class="edito__txt">
+      <span class="label rv">Notre regard</span>
+      <h2 class="display rv rv-d1" id="edito-t">Habiter <em>la lumière.</em></h2>
+      <p class="lede rv rv-d2">Des matières naturelles, des formes douces et une lumière qui transforme les espaces. LAGONA imagine des intérieurs où chaque détail trouve sa place.</p>
+      <dl class="edito__facts rv rv-d3">
+        <div><dt>12</dt><dd>Ateliers<br>partenaires</dd></div>
+        <div><dt>86 %</dt><dd>Matières<br>naturelles</dd></div>
+        <div><dt>10 ans</dt><dd>Garantie<br>structure</dd></div>
+      </dl>
+      <div class="edito__sig rv rv-d3"><a class="btn" href="#univers">Découvrir notre univers</a><span>L’art d’habiter.</span></div>
+    </div>
+  </section>
+
+  <!-- ROOMS -->
+  <section class="sec" aria-labelledby="rooms-t">
+    <div class="wrap">
+      <div class="sec__head">
+        <div class="rv"><span class="label">Inspirations</span><h2 class="display display--md" id="rooms-t">Chaque pièce, <em>un nouvel équilibre.</em></h2></div>
+        <p class="lede rv rv-d1">Sept pièces, sept atmosphères. Imaginez l’intérieur complet, puis retrouvez chaque objet.</p>
+      </div>
+      <div class="rooms__in">
+        <ul class="rooms__list rv">
+          <li><button class="room-btn is-on" data-room="salon" data-cap="Un canapé bas, un pouf en bouclette, et la lumière d’or qui traverse le lin."><small>01</small><span>Le salon</span><em>Voir</em></button></li>
+          <li><button class="room-btn" data-room="chambre" data-cap="Le lin froissé du matin, une lampe de céramique, une niche qui garde la fraîcheur."><small>02</small><span>La chambre</span><em>Voir</em></button></li>
+          <li><button class="room-btn" data-room="sam" data-cap="Une longue table en chêne, des chaises tressées, et la porte ouverte sur le patio."><small>03</small><span>La salle à manger</span><em>Voir</em></button></li>
+          <li><button class="room-btn" data-room="bureau" data-cap="Un bureau sous la fenêtre, des niches en plâtre, le silence d’un après-midi."><small>04</small><span>Le bureau</span><em>Voir</em></button></li>
+          <li><button class="room-btn" data-room="entree" data-cap="Une console de travertin, un miroir libre, des branches sèches : le premier geste."><small>05</small><span>L’entrée</span><em>Voir</em></button></li>
+          <li><button class="room-btn" data-room="sdb" data-cap="Pierre, tadelakt et serviettes de lin. Le bain comme un rituel."><small>06</small><span>La salle de bain</span><em>Voir</em></button></li>
+          <li><button class="room-btn" data-room="exterieur" data-cap="Sous la canisse, l’ombre des oliviers et la vue qui s’étire jusqu’aux collines."><small>07</small><span>L’extérieur</span><em>Voir</em></button></li>
+        </ul>
+        <div class="rooms__stage">
+          <div class="rooms__frame" data-room-frame>
+            <img class="is-on" data-r="salon" src="img/room-salon.jpg" alt="Salon au coucher du soleil, canapé modulable en lin et pouf en bouclette" loading="lazy">
+            <img data-r="chambre" src="img/room-chambre.jpg" alt="Chambre méditerranéenne en lin naturel près d’une fenêtre en arche" loading="lazy">
+            <img data-r="sam" src="img/room-sam.jpg" alt="Salle à manger avec table en chêne et chaises en noyer, ouverte sur un patio" loading="lazy">
+            <img data-r="bureau" src="img/room-bureau.jpg" alt="Bureau en chêne sous une fenêtre, niches en plâtre et céramiques" loading="lazy">
+            <img data-r="entree" src="img/room-entree.jpg" alt="Entrée avec console en travertin, miroir organique et vase de branches sèches" loading="lazy">
+            <img data-r="sdb" src="img/room-sdb.jpg" alt="Salle de bain en travertin, vasque et baignoire en pierre" loading="lazy">
+            <img data-r="exterieur" src="img/room-exterieur.jpg" alt="Terrasse ombragée sous canisse, oliviers en jarres et vue sur les collines" loading="lazy">
+          </div>
+          <div class="rooms__cap"><p data-room-cap>Un canapé bas, un pouf en bouclette, et la lumière d’or qui traverse le lin.</p><a class="link" href="catalogue.html">Shopper la pièce <span class="arrow">→</span></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTING -->
+  <section class="sec light" aria-labelledby="light-t">
+    <div class="wrap light__grid">
+      <div class="light__head">
+        <span class="label rv">Luminaires</span>
+        <h2 class="display rv rv-d1" id="light-t">Une lumière, <em>une atmosphère.</em></h2>
+        <p class="lede rv rv-d2">Suspensions sculpturales, lampes douces et lumières d’appoint. Chaque lumière transforme la perception d’un lieu.</p>
+        <ul class="light__types rv rv-d3">
+          <li><a href="catalogue.html?c=luminaires">Suspensions</a></li><li><a href="catalogue.html?c=luminaires">Lampes de table</a></li><li><a href="catalogue.html?c=luminaires">Lampadaires</a></li><li><a href="catalogue.html?c=luminaires">Appliques</a></li><li><a href="catalogue.html?c=luminaires">Lampes portables</a></li><li><a href="catalogue.html?c=luminaires">Ambiance</a></li>
+        </ul>
+        <a class="btn btn--light rv rv-d3" href="catalogue.html?c=luminaires">Tous les luminaires</a>
+      </div>
+      <figure class="light__a rv" style="margin:0"><div class="ph zoom"><img src="img/light-suspension.jpg" alt="Deux suspensions plissées allumées au-dessus d’une table en chêne, à la tombée de la nuit" loading="lazy"></div><figcaption><span>Suspensions</span><span>Le dîner, 21 h</span></figcaption></figure>
+      <figure class="light__b rv" style="margin:0"><div class="ph zoom"><img src="img/light-applique.jpg" alt="Applique sculpturale en plâtre projetant un éventail de lumière" loading="lazy"></div><figcaption><span>Appliques</span><span>L’entrée</span></figcaption></figure>
+      <figure class="light__c rv rv-d1" style="margin:0"><div class="ph zoom"><img src="img/col-lumiere.jpg" alt="Lampadaire plissé et lampe de table allumés dans un coin salon" loading="lazy"></div><figcaption><span>Lampadaires</span></figcaption></figure>
+      <div class="light__picks" data-light-picks>
+        <div class="light__note rv"><p>« La lumière d’un soir change une pièce plus qu’un meuble. »</p><span class="label">Nos deux lumières signature</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATERIALS -->
+  <section class="sec" aria-labelledby="mat-t">
+    <div class="wrap mat__grid">
+      <div class="mat__head">
+        <span class="label rv">Textiles & matières</span>
+        <h2 class="display rv rv-d1" id="mat-t">Le beau <em>se ressent.</em></h2>
+        <p class="lede rv rv-d2">Le lin, la laine, le bois, la céramique. Des matières authentiques qui racontent le temps et donnent du caractère à nos intérieurs.</p>
+      </div>
+      <figure class="mat__tile mat__t1 zoom rv" style="margin:0"><div class="ph"><img src="img/tex-laine.jpg" alt="Gros plan sur les boucles d’un tapis en laine nouée" loading="lazy"></div><figcaption><div><b>La laine</b><span class="mat__more">Nouée à la main, elle garde la chaleur et étouffe les bruits.</span></div><small>Tapis · Plaids</small></figcaption></figure>
+      <figure class="mat__tile mat__t2 zoom rv" style="margin:0"><div class="ph"><img src="img/tex-lin.jpg" alt="Voilage de lin traversé par le soleil" loading="lazy"></div><figcaption><div><b>Le lin</b><span class="mat__more">Lavé à la pierre, il filtre la lumière comme un voile.</span></div><small>Rideaux · Coussins</small></figcaption></figure>
+      <figure class="mat__tile mat__t3 zoom rv rv-d1" style="margin:0"><div class="ph"><img src="img/tex-ceramique.jpg" alt="Bols et tasse en grès tournés main" loading="lazy"></div><figcaption><div><b>La céramique</b><span class="mat__more">Tournée main, chaque pièce garde la trace du geste.</span></div><small>Vases · Arts de la table</small></figcaption></figure>
+      <figure class="mat__tile mat__t4 zoom rv rv-d2" style="margin:0"><div class="ph"><img src="img/tex-bois-pierre.jpg" alt="Jonction entre un plateau de chêne huilé et un bloc de travertin" loading="lazy"></div><figcaption><div><b>Bois & pierre</b><span class="mat__more">Chêne huilé, noyer, travertin : des matières qui se patinent.</span></div><small>Mobilier</small></figcaption></figure>
+      <div class="mat__list rv"><span>Laine</span><span>Lin lavé</span><span>Bouclette</span><span>Chêne</span><span>Noyer</span><span>Travertin</span><span>Grès</span><span>Papier de riz</span></div>
+    </div>
+  </section>
+</main>
+
+<div id="lg-footer"></div>
+<script src="lagona.js"></script>
+</body>
+</html>

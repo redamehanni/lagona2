@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La collection · LAGONA</title>
+<meta name="theme-color" content="#F5F1EA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="lagona.css">
+</head>
+<body>
+<div id="lg-header"></div>
+
+<main>
+  <section class="banner">
+    <img src="img/cat-salon.jpg" alt="" data-banner-img>
+    <div class="wrap banner__in">
+      <span class="label">LAGONA — La collection</span>
+      <h1 class="display" data-banner-t>Toute la collection</h1>
+      <p data-banner-p>Des pièces choisies pour leur forme, leur matière et leur façon d’habiter l’espace.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d’Ariane"><a href="index.html">Accueil</a><i>/</i><a href="catalogue.html">Collection</a><i>/</i><span data-crumb>Toute la collection</span></nav>
+    <div class="chips" data-chips></div>
+
+    <div class="cat-bar">
+      <span class="cat-bar__count" data-count-out></span>
+      <div class="cat-bar__r">
+        <button class="filt-toggle" data-filters-open>Filtrer</button>
+        <label class="sort"><span>Trier par</span>
+          <select data-sort aria-label="Trier les produits">
+            <option value="rel">Pertinence</option>
+            <option value="new">Nouveautés</option>
+            <option value="asc">Prix croissant</option>
+            <option value="desc">Prix décroissant</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="cat-layout">
+      <aside class="filters" aria-label="Filtres">
+        <div class="filters__head"><h3>Filtrer</h3><button class="x" data-filters-close aria-label="Fermer"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></button></div>
+        <div class="fgroup">
+          <h6>Prix</h6>
+          <div class="range"><span class="range__track"></span><span class="range__fill" data-range-fill></span><input type="range" min="40" max="1500" step="10" value="1500" data-range aria-label="Prix maximum"></div>
+          <div class="range__out" data-range-out></div>
+        </div>
+        <div class="fgroup"><h6>Couleur</h6><div class="fswatches" data-f-tones></div></div>
+        <div class="fgroup"><h6>Matière</h6><div data-f-mats></div></div>
+        <div class="fgroup"><h6>Style</h6><div data-f-styles></div></div>
+        <button class="freset" data-reset>Effacer les filtres</button>
+      </aside>
+      <div class="fveil" data-filters-close></div>
+      <div class="grid" data-cat-grid></div>
+    </div>
+  </div>
+</main>
+
+<div id="lg-footer"></div>
+<script src="lagona.js"></script>
+</body>
+</html>
